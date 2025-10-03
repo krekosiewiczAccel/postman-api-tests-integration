@@ -1990,6 +1990,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "77751384-fd94-478d-904d-429f7cc638d2",
 								"exec": [
 									"// Reset cleanup array at the beginning of tests",
 									"pm.collectionVariables.set(\"cleanup_ids\", JSON.stringify([]));",
@@ -1998,15 +1999,15 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "77751384-fd94-478d-904d-429f7cc638d2"
+								"requests": {}
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
+								"id": "7a464d84-9832-4b0c-81ec-77ede3d9cb10",
 								"exec": [
-									"pm.test(\"Countries loaded\", function () {",
+									"pm.test(\"Countries loadeddddsdsds\", function () {",
 									"    const jsonData = pm.response.json();",
 									"    if (jsonData.data.listCountries && jsonData.data.listCountries.length > 0) {",
 									"        pm.environment.set(\"test_country_id\", jsonData.data.listCountries[0].id);",
@@ -2016,8 +2017,7 @@
 								],
 								"type": "text/javascript",
 								"packages": {},
-								"requests": {},
-								"id": "7a464d84-9832-4b0c-81ec-77ede3d9cb10"
+								"requests": {}
 							}
 						}
 					],
